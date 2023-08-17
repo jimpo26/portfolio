@@ -145,7 +145,7 @@ export default function Timeline({x}) {
             <div className="text toRight" ref={circlesText[1]}>
                 <span>
                     Towards the close of 2021, an intriguing project emerged – a client requested a mobile application.
-                    This marked my introduction to React Native, though I didn't delve deeply into mobile development.
+                    This marked my introduction to React Native, though I didn&apos;t delve deeply into mobile development.
                     Nevertheless, I absorbed knowledge about React and vital JavaScript concepts like asynchronous
                     programming and promises. Little did I know, these insights would lay a solid foundation for my future
                     web application endeavors.
@@ -154,7 +154,7 @@ export default function Timeline({x}) {
             <div className="text" ref={circlesText[2]}>
                 <span>
                     As summer transitioned into the close of 2022, my focus shifted towards unraveling the intricacies of
-                    Amazon's ecosystem. I embraced web scraping and honed my skills in debugging private APIs using tools
+                    Amazon&apos;s ecosystem. I embraced web scraping and honed my skills in debugging private APIs using tools
                     like Postman and Mitmproxy, alongside dissecting internet traffic with Wireshark. This exploration
                     deepened my understanding of the HTTP protocol, paving the way for the creation of Aurora, my
                     personalized Amazon bot, and NowPrice, my startup venture.

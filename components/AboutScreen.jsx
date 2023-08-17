@@ -63,11 +63,11 @@ export function AboutScreen() {
             <div className="column">
                 <div className="about-text">
                     <p style={{opacity: '0.8'}}>
-                        Hey there, I'm a passionate developer always looking for new challenges.
+                        Hey there, I&apos;m a passionate developer always looking for new challenges.
                         I love trying out new stuff, especially when it comes to backend and frontend development.
-                        Lately, I've also gotten into UI/UX design and I'm working on improving my skills in that area.
+                        Lately, I&apos;ve also gotten into UI/UX design and I&apos;m working on improving my skills in that area.
                         <br /><br/>
-                        I always keep myself updated with the latest technologies and I'm always looking for new
+                        I always keep myself updated with the latest technologies and I&apos;m always looking for new
                         opportunities to learn and grow.
                     </p>
                 </div>
