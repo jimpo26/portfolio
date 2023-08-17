@@ -48,3 +48,8 @@
         font-size: 5em;
     }
 }
+
+.auroraBanner{
+    aspect-ratio: 3/2;
+    border-radius: 20px;
+}

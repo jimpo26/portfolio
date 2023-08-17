@@ -7,7 +7,7 @@ import HomeScreen from "@/components/HomeScreen";
 import {AboutScreen} from "@/components/AboutScreen";
 import Cursor from "@/components/Cursor";
 import {ProjectsScreen} from "@/components/ProjectsScreen";
-import React from "react";
+import React, {useMemo} from "react";
 import Lenis from '@studio-freight/lenis'
 import Timeline from "@/components/timeline";
 import ContactScreen from "@/components/contact";
@@ -34,7 +34,7 @@ export default function Home() {
             });
         }
         document.body.style.height = `${ref.current?.scrollHeight}px`;
-    }, [ref.current]);
+    }, []);
     return (
         <div style={{cursor: "none"}}>
             <Cursor />
@@ -55,7 +55,7 @@ export default function Home() {
                     <HomeScreen />
                     <AboutScreen />
                     <ProjectsScreen />
-                    {window.innerWidth > 768 && <Timeline x={scroll}/>}
+                    <Timeline x={scroll}/>
                     <ContactScreen />
                 </div>
             </div>

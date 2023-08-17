@@ -15,18 +15,9 @@ export default function Timeline({x}) {
     const [startingSvg, setStartingSvg] = useState(0);
     const [textVisible, setTextVisible] = useState(false);
     const [startingText, setStartingText] = useState(0);
-
+    const [w, setW] = useState(1000);
     // use intersection observer to check if the svg is visible
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.target.id !== "container" && entry.isIntersecting) {
-                setVisible(true)
-                observer.unobserve(entry.target);
-            } else if(entry.target.id === "container" && entry.isIntersecting) {
-                setTextVisible(true)
-                observer.unobserve(entry.target);
-            }
-    })}, {threshold: 0.1})
+
 
     if(pathRef.current !== null && containerRef.current !== null){
         let pathLen = pathRef.current.getTotalLength();
@@ -57,7 +48,6 @@ export default function Timeline({x}) {
                 circlesText[0].current.style.opacity = 1;
             } else if(Math.floor(done) === 171) {
                 // get pixels from dashoffset
-                console.log(x - startingText)
                 circlesText[0].current.style.top =  x-startingText + "px"//height * (pathLen - done) / (pathLen * n) +624/2+circlesText[0].current.getBoundingClientRect().height/2 + "px";
             }
             else {
@@ -123,15 +113,29 @@ export default function Timeline({x}) {
     }
 
     useEffect(() => {
+        setW(window.innerWidth)
+
         let l = pathRef.current.getTotalLength();
         dashoffset = l;
 
         visibleSvgRef.current.setAttributeNS(null, "stroke-dasharray", l);
         visibleSvgRef.current.setAttributeNS(null, "stroke-dashoffset", l);
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.target.id !== "container" && entry.isIntersecting) {
+                    setVisible(true)
+                    observer.unobserve(entry.target);
+                } else if(entry.target.id === "container" && entry.isIntersecting) {
+                    setTextVisible(true)
+                    observer.unobserve(entry.target);
+                }
+            })}, {threshold: 0.1})
         observer.observe(svgRef.current);
         observer.observe(containerRef.current);
 
     }, [visibleSvgRef, pathRef, containerRef])
+    if(w<768)
+        return (<></>)
     return (
         <div className="timeline" ref={containerRef} id="container">
             <div className="text" ref={circlesText[0]}>

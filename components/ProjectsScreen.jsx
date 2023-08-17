@@ -5,6 +5,7 @@ import Project from "@/components/Project";
 import SlideInTitle from "@/components/SlideInTitle";
 import {Parallax, ParallaxBanner, ParallaxProvider} from "react-scroll-parallax";
 import Image from "next/image";
+import {useEffect} from "react";
 
 export function ProjectsScreen() {
     const images = [[
@@ -81,7 +82,7 @@ export function ProjectsScreen() {
                     link={"/blog/aurora"}
                     images={[
                         <ParallaxBanner layers={[{image: "/aurora.jpeg", speed: -10}]}
-                                        style={auroraStyle} key={0}
+                                        className="auroraBanner" key={0}
                         />
 
                     ]}
@@ -107,12 +108,3 @@ export function ProjectsScreen() {
         </div>
     )
 }
-
-
-const auroraStyle = window.innerWidth > 1024 ? {
-    width: "550px", height: "366px",borderRadius: "20px"
-} : window.innerWidth > 768 ? {
-    width: "400px", height: "266px",borderRadius: "20px"
-} : window.innerWidth > 425 ? {
-    width: "300px", height: "200px",borderRadius: "20px"
-} : {width: "100%", height: "200px",borderRadius: "20px"}
