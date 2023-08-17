@@ -1,0 +1,36 @@
+.inner{
+    background-color: var(--color);
+    transform: translate(-25vw, -50vh);
+    animation: bg 10s infinite alternate;
+    filter: blur(110px);
+}
+.shape{
+    width: 0;
+    height: 0;
+    transition: width 10s, height 10s; /* Apply transition to width and height */
+}
+@keyframes bg {
+    0% {
+        background-color: #2B0A29;
+    }
+    50% {
+        background-color: #180417;
+    }
+    100% {
+        background-color: #2B0A29;
+    }
+
+}
+
+.outer{
+    width: 100vw;
+    height: 100vh;
+    cursor: none;
+}
+
+
+.inner{
+    position: absolute;
+    width: 150vw;
+    height: 200vh;
+}

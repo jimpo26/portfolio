@@ -1,0 +1,50 @@
+.projects-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.projects-title {
+    padding: 10px calc(100vw / 12);
+    color: transparent;
+    overflow: hidden;
+}
+
+#projects {
+    -webkit-text-stroke: 1px #a31d5f;
+    font-family: "LarkenItalic", serif;
+    color: transparent;
+    letter-spacing: -10px;
+    font-size: 15em;
+    margin-left: 10vw;
+}
+
+@media screen and (max-width: 1024px){
+    #projects {
+        font-size: 10em;
+    }
+}
+
+@media screen and (max-width: 768px){
+    #projects {
+        font-size: 8em;
+    }
+}
+
+@media screen and (max-width: 600px){
+    #projects {
+        font-size: 7em;
+    }
+}
+
+@media screen and (max-width: 500px){
+    #projects {
+        font-size: 6em;
+    }
+}
+
+@media screen and (max-width: 400px){
+    #projects {
+        font-size: 5em;
+    }
+}

@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* hide scroll bar */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* hide scroll bar */
+* {
+  scrollbar-width: none;
+  border: none;
+  margin: 0;
+  box-sizing: border-box;
+  cursor: none;
+}
+
+:root{
+  --color: #2B0A29;
+}
+
+@font-face {
+  font-family: 'PolySans-Neutral';
+  src: url('PolySans-Neutral.woff2');
+}
+
+@font-face {
+    font-family: 'LarkenItalic';
+    src: url('LarkenItalic.otf');
+}
+
+
+/*@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --foreground-rgb: 0, 0, 0;
+    --background-start-rgb: 255, 255, 255;
+    --background-end-rgb: 255, 255, 255;
+  }
+}*/
+
+body {
+  overflow-x: hidden;
+  color: white;
+  background-color: var(--color);
+  animation: bg 10s infinite alternate;
+}
